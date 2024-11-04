@@ -1,0 +1,205 @@
+Basic Commands
+1.) ls:
+Description: Lists contents of a directory.
+Example: ls -la shows all files including hidden ones with detailed information.
+
+2.) pwd:
+Description: Prints the current working directory.
+Example: Running pwd might return /home/user/documents.
+
+3.) cd:
+Description: Changes the current directory.
+Example: cd /var/log navigates to the /var/log directory.
+Example #2: cd ~ = home directory cd / = root directory	 cd.. = is used to move up one directory level in the file system 
+
+4.) mkdir:
+
+Description: Creates a new directory.
+Example: mkdir projects creates a directory named "projects".
+
+5.) touch:
+Description: Creates an empty file or updates the timestamp of an existing file.
+Example: touch newfile.txt creates "newfile.txt" if it doesn’t exist.
+
+6.) rm:
+Description: Removes files or d5.) Nano 
+Description: Edits Text files with "nano"
+Example: nano game.sh, nano forest.txtirectories.
+Example: rm -r oldfolder deletes "oldfolder" and its contents.
+
+7.) cp:
+Description: Copies files or directories.
+Example: cp report.pdf /home/user/documents/ copies "report.pdf" to the specified directory.
+
+mv:
+Description: Moves or renames files or directories.
+Example: mv draft.txt final_draft.txt renames "draft.txt" to "final_draft.txt".
+
+8.) cat:
+Description: Displays the contents of a file.
+Example: cat notes.txt shows the content of "notes.txt" on the terminal.
+
+[Networking Commands]
+
+1.) ifconfig or ip a:
+Description: Displays network interface configurations.
+Example: ip a lists all network interfaces and their IP addresses.
+
+2.) ping:
+Description: Tests network connectivity to a host.
+Example: ping example.com checks if the website "example.com" is reachable.
+
+3.) traceroute:
+Description: Traces the route packets take to a network destination.
+Example: traceroute example.com shows the path packets take to reach "example.com".
+
+4.) netstat:
+Description: Displays network connections and statistics.
+Example: netstat -tuln lists all open TCP and UDP ports.
+
+5.) nmap:
+Description: Scans networks for open ports and services.
+Example: nmap 192.168.1.1 scans the specified IP address for open ports.
+
+[File Permissions & Ownership]
+
+1.) chmod:
+Description: Changes file permissions.
+Examples:
+chmod 755 script.sh: Sets read/write/execute for the owner and read/execute for others.
+chmod 644 document.txt: Sets read/write for the owner and read-only for others.
+chmod 777 folder: Gives full permissions to everyone.
+
+2.) chown:
+Description: Changes file ownership.
+Example: sudo chown user:group file.txt changes the owner of "file.txt" to "user" and the group to "group".
+
+3.) ls -l:
+Description: Lists files with detailed information including permissions.
+Example: ls -l shows permissions, ownership, and file details.
+Process Management
+
+4.) top:
+Description: Displays real-time system processes and resource usage.
+Example: top shows a dynamic view of active processes.
+
+5.) ps:
+Description: Shows a snapshot of currently running processes.
+Example: ps aux lists all processes with detailed information.
+
+6.) kill:
+Description: Terminates processes by ID.
+Example: kill 1234 stops the process with ID 1234.
+
+7.) df:
+Description: Shows disk space usage.
+Example: df -h displays disk space in a human-readable format.
+
+8.) du:
+Description: Shows disk usage of files and directories.
+Example: du -h /var shows sizes of files and directories under /var.
+
+9.) free:
+Description: Displays memory usage (RAM and swap).
+Example: free -m shows memory usage in megabytes.
+10.) Nano 
+Description: Edits Text files with "nano"
+Example: nano game.sh, nano forest.txt
+
+
+[Package Management]
+su- super user
+sudo-"super user do"
+
+1.) sudo apt-get update:
+Description: Updates the list of available packages.
+Example: sudo apt-get update fetches the latest package information.
+
+2.) sudo apt-get upgrade:
+Description: Upgrades all installed packages to the latest versions.
+Example: sudo apt-get upgrade applies available updates to installed packages.
+
+3.) sudo apt-get install:
+Description: Installs new software packages.
+Example: sudo apt-get install nmap installs the "nmap" package.
+
+4.) sudo apt-get remove:
+Description: Removes installed software packages.
+Example: sudo apt-get remove nmap uninstalls the "nmap" package.
+
+[Terminology]
+
+1.) Ethical Hacking:
+Description: Legally breaking into systems to find and fix vulnerabilities before malicious hackers can exploit them.
+
+2.) Penetration Testing:
+Description: Simulating attacks to assess the security of a system.
+
+3.) Firewall:
+Description: A network security system that monitors and controls incoming and outgoing network traffic based on security rules.
+
+4.) Vulnerability:
+Description: A weakness in a system that can be exploited by attackers.
+
+5.) Exploit:
+Description: A method or piece of software that takes advantage of a vulnerability.
+
+6.) Patch:
+Description: An update or fix for software that addresses security issues or bugs.
+
+7.) Malware:
+Description: Malicious software designed to disrupt or damage systems, including viruses, worms, and ransomware.
+
+8.) Zero-Day:
+Description: A vulnerability that is exploited before the software vendor has issued a fix.
+
+9.) Encryption:
+Description: The process of converting data into a secure format to prevent unauthorized access.
+
+10.) IP Address:
+Description: A unique identifier assigned to a device on a network.
+
+11.) Port Scanning:
+Description: Probing a system's ports to find open ones that might be vulnerable.
+Simplified Notes
+
+Comments (#):
+
+Comments start with # and are ignored by the computer.
+They explain code and serve as reminders.
+No limit on the number or detail of comments.
+echo Command:
+
+Displays messages on the screen (like making the computer "speak").
+Useful for prompts, comments, instructions, and testing code.
+Remove echo statements after troubleshooting.
+Variables:
+
+Containers that store values (e.g., age_years, age_days).
+read -p "Enter your age in years: " age_years takes user input and stores it.
+Use echo to display variable values for troubleshooting.
+if Statement:
+
+Checks if a condition is true, controlling script flow.
+Validates user input.
+Regex (^[0-9]+$):
+
+A pattern to match text (regular expression).
+Ensures input is only digits (0-9).
+^ = start, $ = end, [0-9] = any digit, + = one or more.
+Learning resource: regexlearn.com/learn/regex101
+[[ ]] and !~:
+
+[[ ]] tests conditions in Bash.
+!~ means "does not match."
+Example: [[ ! $age_years =~ ^[0-9]+$ ]] checks if input isn’t a number.
+Explore other conditionals: ==, |, >, <, -eq, -ne, -gt.
+Arithmetic Calculation ($(( ))):
+
+$(( )) performs math calculations in Bash.
+Example: age_days=$((age_years * 365)) calculates days from years.
+Exit Code (exit 1):
+
+exit 1 ends the script with an error code (indicating something went wrong).
+Stops if user input is invalid.
+Use echo to clarify the error for users.
